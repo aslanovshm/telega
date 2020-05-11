@@ -1,0 +1,113 @@
+.steps {
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+.steps__inner {
+  overflow: hidden;
+}
+
+.steps__title {
+  margin-bottom: 70px;
+
+  @include tablet {
+    & span {
+      &:after {
+        bottom: 0px;
+        right: -12px;
+        width: 198px;
+        height: 21px;
+      }
+    }
+  }
+}
+
+.steps__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -162px;
+  }
+}
+
+.steps__item {
+  position: relative;
+  margin-bottom: 45px;
+  padding-top: 103px;
+
+  &--end {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 114px;
+    height: 114px;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    transition-duration: 0.2s;
+    transition-property: transform;
+  }
+
+  &:hover {
+    &:before {
+      transform: translate(-50%, -10px);
+    }
+  }
+
+  &--meeting:before {
+    width: 111px;
+    height: 80px;
+    background-image: url(../images/icon-messages.png);
+  }
+
+  &--strategy:before {
+    width: 85px;
+    height: 85px;
+    background-image: url(../images/icon-strategy.png);
+  }
+
+  &--deal:before {
+    width: 79px;
+    height: 79px;
+    background-image: url(../images/icon-document.png);
+  }
+
+  &--work:before {
+    width: 116px;
+    height: 73px;
+    background-image: url(../images/icon-urgently.png);
+  }
+
+  &--end:before {
+    width: 103px;
+    height: 72px;
+    background-image: url(../images/icon-progress.png);
+  }
+
+  @include tablet {
+    width: 270px;
+    margin-right: 120px;
+  }
+
+  @include desktop {
+    margin-right: 162px;
+    margin-bottom: 84px;
+
+    &--end {
+      margin-bottom: 0;
+    }
+
+    &--work {
+      margin-bottom: 0;
+    }
+  }
+}

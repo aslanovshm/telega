@@ -1,0 +1,215 @@
+.top-nav {
+  margin-bottom: 75px;
+
+  @include mobile-only {
+    text-align: center;
+  }
+
+  @include tablet {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.top-nav__menu {
+  @include mobile-only {
+    margin-bottom: 20px;
+  }
+
+  @include tablet-only {
+    order: 3;
+    margin-top: 9px;
+    margin-left: auto;
+  }
+}
+
+.top-nav__list,
+.top-nav__user {
+  margin: 0;
+  padding: 0;
+  font-family: "ProximaNovaExCn", sans-serif;
+  list-style: none;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.top-nav__item {
+  position: relative;
+
+  @include mobile-only {
+    padding: 10px;
+  }
+
+  @include tablet {
+    margin-right: 31px;
+    padding-right: 34px;
+
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 9px;
+        height: 10px;
+        background-image: url("../images/icon-x.png");
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.top-nav__link {
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    transition: width .2s ease-in-out;
+  }
+
+  &:hover {
+    position: relative;
+    padding-bottom: 2px;
+    color: #fde44c;
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+    }
+
+    &:after {
+      background-color: #fde44c;
+      z-index: 1;
+    }
+
+    &:before {
+      bottom: 1px;
+      left: -3px;
+      background-image: url(../images/icon-waves.png);
+      background-position: -1px 0;
+      z-index: 2;
+    }
+  }
+}
+
+.top-nav__user {
+  @include mobile-only {
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    order: 2;
+  }
+
+  @include desktop {
+    order: 3;
+  }
+}
+
+.top-nav__user-item {
+  @include tablet {
+    &--register {
+      margin-left: 59px;
+      font-weight: 700;
+    }
+  }
+}
+
+.top-nav__user-link {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+
+  @include mobile-only {
+    display: block;
+    padding: 17px 24px;
+  }
+
+  @include tablet {
+    &--login {
+      position: relative;
+      padding-bottom: 4px;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+      }
+
+      &:after {
+        background-color: #fde44c;
+        z-index: 1;
+      }
+
+      &:before {
+        bottom: 1px;
+        left: -2px;
+        background-image: url(../images/icon-waves.png);
+        background-position: -1px 0;
+        z-index: 2;
+      }    
+    }
+  }
+
+  &--register {
+    padding: 14px 24px;
+    background-color: #fde44c;
+    transition-duration: 0.2s;
+    transition-property: transform;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.top-nav__phone {
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #ffffff;
+
+  @include mobile-only {
+    display: block;
+    padding: 10px;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: 122px;
+    left: 25px;
+  }
+
+  @include desktop {
+    top: 122px;
+    left: 47%;
+    font-weight: 700;
+  }
+}

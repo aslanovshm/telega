@@ -1,0 +1,17 @@
+.title {
+  margin: 0;
+  font-size: 33px;
+  line-height: 40px;
+  text-align: center;
+
+  & span {
+    position: relative;
+    z-index: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #94ead3;
+      z-index: -1;
+    }
+  }
+}

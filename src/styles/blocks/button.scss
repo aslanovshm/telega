@@ -1,0 +1,19 @@
+.button {
+  width: 153px;
+  padding: 12px;
+  font-family: "ProximaNovaExCn", sans-serif;
+  font-size: 20.5px;
+  line-height: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2089cd;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

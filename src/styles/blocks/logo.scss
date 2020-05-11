@@ -1,0 +1,10 @@
+.logo {
+  transform: translateZ(0);
+
+  &:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}

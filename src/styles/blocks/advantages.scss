@@ -1,0 +1,95 @@
+.advantages {
+  padding-top: 63px;
+  padding-bottom: 33px;
+  text-align: center;
+}
+
+.advantages__inner {
+  overflow: hidden;
+}
+
+.advantages__title {
+  margin-bottom: 48px;
+
+  @include tablet {
+    & span {
+      &:after {
+        bottom: 3px;
+        right: 5px;
+        width: 281px;
+        height: 21px;
+      }
+    }
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -162px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  margin-bottom: 45px;
+  padding-top: 142px;
+  font-weight: 400;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 114px;
+    height: 114px;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    transition-duration: 0.2s;
+    transition-property: transform;
+  }
+
+  &:hover {
+    &:before {
+      transform: translate(-50%, -10px);
+    }
+  }
+
+  &--channels:before {
+    background-image: url(../images/icon-chatting.png);
+  }
+
+  &--audience:before {
+    width: 121px;
+    background-image: url(../images/icon-telegram.png);
+  }
+
+  &--advice:before {
+    background-image: url(../images/icon-analyze.png);
+  }
+
+  &--feature:before {
+    width: 118px;
+    background-image: url(../images/icon-browser.png);
+  }
+
+  &--analyze:before {
+    background-image: url(../images/icon-team.png);
+  }
+
+  @include tablet {
+    width: 280px;
+    margin-right: 120px;
+  }
+
+  @include desktop {
+    margin-right: 162px;
+    margin-bottom: 15px;
+  }
+}

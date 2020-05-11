@@ -1,0 +1,29 @@
+.page-header {
+  padding-top: 43px;
+  padding-bottom: 70px;
+  color: #ffffff;
+  background-color: #2892d3;
+
+  @include tablet {
+    background-image: url(../images/background-header-tablet.jpg);
+    background-size: cover;
+  }
+
+  @include desktop {
+    background-image: url(../images/background-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.page-header__logo {
+  display: block;
+
+  @include mobile-only {
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    order: 2;
+  }
+}

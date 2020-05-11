@@ -1,0 +1,20 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__item {
+  margin-right: 10px;
+}
+
+.socials__item {
+  transition-duration: 0.1s;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

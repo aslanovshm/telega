@@ -1,0 +1,181 @@
+.features {
+  position: relative;
+  padding: 69px 0 56px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #329cda;
+  transform: skewY(-2.7deg);
+  background-image: url(../images/pixels.png);
+  background-position: top 42px left;
+  background-repeat: no-repeat;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+  }
+
+  &:after {
+    height: 35px;
+    background-image: linear-gradient(to right,#ffffff 20%, #fde44c 20%);
+    z-index: 1;
+  }
+
+  @include desktop {
+    box-sizing: border-box;
+    height: 500px;
+  }
+}
+
+.features__inner {
+  transform: skewY(2.7deg);
+
+  @include desktop {
+    background-image: url(../images/icon-target.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.features__list {
+  position: relative;
+  height: 420px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    height: 260px;
+  }
+
+  @include desktop {
+    height: 220px;
+  }
+}
+
+.features__item {
+  position: absolute;
+  box-sizing: border-box;
+  width: 223px;
+  padding: 20px 15px;
+  background-color: #2f92cb;
+  transition-duration: 0.2s;
+  transition-property: transform;
+
+  &:hover {
+    transform: translate(10px, -10px);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -35px;
+    width: 44px;
+    height: 35px;
+    background-image: url(../images/icon-tail.png);
+  }
+
+  &--first {
+    top: 20px;
+    right: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    @include tablet {
+      top: 25px;
+      right: 49px;
+    }
+
+    @include desktop {
+      top: -13px;
+    }
+  }
+
+  &--second {
+    top: 120px;
+    left: 0;
+
+    @include tablet {
+      top: 70px;
+    }
+
+    @include desktop {
+      top: 80px;
+      left: 96px;
+    }
+
+    &:after {
+      left: 0;
+      transform: scale(-1, 1);
+    }
+  }
+
+  &--third {
+    right: 0;
+    bottom: 58px;
+
+    @include tablet {
+      bottom: 15px;
+    }
+
+    @include desktop {
+      right: -57px;
+      bottom: -43px;
+    }
+  }
+}
+
+.features__text {
+  margin: 0 0 20px;
+  font-size: 19px;
+  line-height: 27px;
+
+  @include desktop {
+    padding: 0 197px;
+  }
+}
+
+.features__small-text {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #a2d9fa;
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.features__button {
+  display: inline-block;
+  padding: 11px 20px;
+  font-family: "ProximaNovaExCn", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  background-color: #fde44c;
+  transition-duration: 0.2s;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include tablet {
+    position: absolute;
+    top: 198px;
+    right: 241px;
+  }
+
+  @include desktop {
+    top: 132px;
+    right: 162px;
+  }
+}
